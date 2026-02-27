@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cass Prod | Produção Profissional</title>
+    <title>Cass Prod | Digital Media & Software Solutions</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,7 @@
             --primary-blue: #1a365d;
             --accent-blue: #3182ce;
             --accent-cyan: #4fd1c5;
+            --accent-red: #e53e3e;
             --neutral-100: #f7fafc;
             --neutral-200: #edf2f7;
             --neutral-300: #e2e8f0;
@@ -32,17 +33,12 @@
             --text-secondary: #2d3748;
             --gradient-cold: linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #2c5282 100%);
             --gradient-subtle: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+            --gradient-wizardcut: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-youtube: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -58,7 +54,7 @@
             color: var(--text-primary);
         }
 
-        /* Navbar */
+        /* ===== NAVBAR ===== */
         .navbar-custom {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
@@ -67,13 +63,11 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border-bottom: 1px solid transparent;
         }
-
         .navbar-custom.scrolled {
             padding: 0.6rem 0;
             border-bottom: 1px solid var(--neutral-300);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
         }
-
         .navbar-brand {
             font-family: 'Syne', sans-serif;
             font-weight: 800;
@@ -81,30 +75,20 @@
             color: var(--text-primary) !important;
             letter-spacing: -0.02em;
         }
-
         .logo-placeholder {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             background: var(--gradient-cold);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin-right: 12px;
             transition: transform 0.3s ease;
         }
-
-        .logo-placeholder:hover {
-            transform: scale(1.05);
-        }
-
+        .logo-placeholder:hover { transform: scale(1.05); }
         .logo-placeholder span {
             color: white;
             font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
+            font-weight: 800; font-size: 1.1rem;
         }
-
         .nav-link {
             font-family: 'DM Sans', sans-serif;
             font-weight: 500;
@@ -114,26 +98,14 @@
             position: relative;
             transition: color 0.3s ease;
         }
-
         .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 2px;
             background: var(--accent-blue);
             transition: width 0.3s ease;
         }
-
-        .nav-link:hover {
-            color: var(--text-primary) !important;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
+        .nav-link:hover { color: var(--text-primary) !important; }
+        .nav-link:hover::after { width: 100%; }
         .btn-nav {
             background: var(--text-primary);
             color: white !important;
@@ -144,74 +116,53 @@
             transition: all 0.3s ease;
             border: 2px solid var(--text-primary);
         }
-
         .btn-nav:hover {
             background: transparent;
             color: var(--text-primary) !important;
             transform: translateY(-2px);
         }
 
-        /* Hero Section */
+        /* ===== HERO ===== */
         .hero {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
+            display: flex; align-items: center;
             position: relative;
             background: var(--gradient-subtle);
             overflow: hidden;
             padding-top: 80px;
         }
-
         .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 80%;
-            height: 150%;
+            content: ''; position: absolute;
+            top: -50%; right: -20%;
+            width: 80%; height: 150%;
             background: radial-gradient(circle, rgba(49, 130, 206, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
-
         .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            content: ''; position: absolute;
+            bottom: 0; left: 0; right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
+        .hero-content { position: relative; z-index: 2; }
         .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-flex; align-items: center; gap: 8px;
             background: white;
             padding: 0.5rem 1.2rem;
             border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.85rem; font-weight: 500;
             color: var(--text-secondary);
             margin-bottom: 2rem;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
             animation: fadeInUp 0.8s ease forwards;
             opacity: 0;
         }
-
         .hero-tag .dot {
-            width: 8px;
-            height: 8px;
+            width: 8px; height: 8px;
             background: var(--accent-cyan);
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
-
         .hero h1 {
             font-size: clamp(2.8rem, 6vw, 5rem);
             line-height: 1.1;
@@ -220,753 +171,729 @@
             animation: fadeInUp 0.8s ease 0.1s forwards;
             opacity: 0;
         }
-
         .hero h1 .highlight {
             background: var(--gradient-cold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .hero p {
             font-size: 1.2rem;
             color: var(--text-secondary);
-            max-width: 500px;
+            max-width: 540px;
             margin-bottom: 2.5rem;
             animation: fadeInUp 0.8s ease 0.2s forwards;
             opacity: 0;
         }
-
         .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            display: flex; gap: 1rem; flex-wrap: wrap;
             animation: fadeInUp 0.8s ease 0.3s forwards;
             opacity: 0;
         }
-
         .btn-primary-custom {
-            background: var(--text-primary);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            background: var(--text-primary); color: white;
+            padding: 1rem 2.5rem; border-radius: 50px;
+            font-weight: 600; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 10px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid var(--text-primary);
         }
-
         .btn-primary-custom:hover {
-            background: transparent;
-            color: var(--text-primary);
+            background: transparent; color: var(--text-primary);
             transform: translateY(-3px);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
         }
-
         .btn-secondary-custom {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            background: transparent; color: var(--text-primary);
+            padding: 1rem 2.5rem; border-radius: 50px;
+            font-weight: 600; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 10px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid var(--neutral-300);
         }
-
         .btn-secondary-custom:hover {
-            border-color: var(--text-primary);
-            color: var(--text-primary);
+            border-color: var(--text-primary); color: var(--text-primary);
             transform: translateY(-3px);
         }
-
         .hero-visual {
             position: relative;
             animation: fadeInRight 1s ease 0.4s forwards;
             opacity: 0;
         }
-
         .hero-card {
             background: white;
-            border-radius: 24px;
-            padding: 3rem;
+            border-radius: 24px; padding: 3rem;
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.08);
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .hero-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            content: ''; position: absolute;
+            top: 0; left: 0; right: 0;
             height: 4px;
             background: var(--gradient-cold);
         }
-
-        .hero-card-content {
-            position: relative;
-            z-index: 2;
-        }
-
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
-
         .stat-item {
-            text-align: center;
-            padding: 1.5rem;
+            text-align: center; padding: 1.5rem;
             background: var(--neutral-100);
             border-radius: 16px;
             transition: transform 0.3s ease;
         }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-        }
-
+        .stat-item:hover { transform: translateY(-5px); }
         .stat-number {
             font-family: 'Syne', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 2.5rem; font-weight: 800;
             color: var(--primary-blue);
             line-height: 1;
         }
-
         .stat-label {
             font-size: 0.9rem;
             color: var(--text-secondary);
             margin-top: 0.5rem;
         }
 
-        /* Services Section */
-        .services {
-            padding: 8rem 0;
+        /* ===== PRODUCTS/SERVICES OVERVIEW ===== */
+        .products-overview {
+            padding: 6rem 0;
             background: white;
             position: relative;
         }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
+        .section-header { margin-bottom: 4rem; }
         .section-tag {
             display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 0.8rem; font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--accent-blue);
             margin-bottom: 1rem;
         }
-
         .section-title {
             font-size: clamp(2rem, 4vw, 3rem);
             letter-spacing: -0.02em;
             margin-bottom: 1rem;
         }
-
         .section-subtitle {
             font-size: 1.1rem;
             color: var(--text-secondary);
             max-width: 600px;
         }
-
-        .service-card {
+        .product-highlight-card {
             background: var(--neutral-100);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+            height: 100%;
+        }
+        .product-highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+            border-color: var(--neutral-200);
+        }
+        .product-card-header {
+            padding: 2.5rem 2.5rem 0;
+        }
+        .product-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.2rem;
+        }
+        .badge-software {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+        }
+        .badge-media {
+            background: rgba(229, 62, 62, 0.1);
+            color: var(--accent-red);
+        }
+        .product-card-body { padding: 1.5rem 2.5rem 2.5rem; }
+        .product-card-body h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        .product-card-body p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .product-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-weight: 600; text-decoration: none;
+            transition: gap 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .product-link:hover { gap: 14px; }
+        .product-link.wizardcut-link { color: #667eea; }
+        .product-link.wizardcut-link:hover { color: #5a6fd6; }
+        .product-link.youtube-link { color: var(--accent-red); }
+        .product-link.youtube-link:hover { color: #c53030; }
+
+        /* ===== WIZARDCUT SECTION ===== */
+        .wizardcut-section {
+            padding: 8rem 0;
+            background: var(--gradient-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+        .wizardcut-section::before {
+            content: ''; position: absolute;
+            top: -30%; left: -20%;
+            width: 60%; height: 120%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .wc-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .wc-feature {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 16px;
+            display: flex; align-items: flex-start; gap: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+        }
+        .wc-feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .wc-feature-icon {
+            width: 48px; height: 48px; min-width: 48px;
+            background: var(--gradient-wizardcut);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.2rem;
+        }
+        .wc-feature h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .wc-feature p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        .wc-screenshot-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+            background: white;
+            border: 1px solid var(--neutral-200);
+        }
+        .wc-screenshot-bar {
+            background: var(--neutral-200);
+            padding: 0.8rem 1.2rem;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .wc-dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+        }
+        .wc-dot.red { background: #ff5f56; }
+        .wc-dot.yellow { background: #ffbd2e; }
+        .wc-dot.green { background: #27c93f; }
+        .wc-screenshot-url {
+            flex: 1;
+            background: white;
+            border-radius: 6px;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            color: var(--neutral-600);
+            margin-left: 8px;
+        }
+        .wc-screenshot-body {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f5f7fa 30%);
+            display: flex; align-items: center; justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Placeholder para screenshot do WizardCut */
+        .wc-screenshot-placeholder {
+            width: 100%; height: 100%;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            color: white;
+            background: var(--gradient-wizardcut);
+            padding: 2rem;
+            text-align: center;
+        }
+        .wc-screenshot-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        .wc-screenshot-placeholder span {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        .wc-screenshot-placeholder small {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 0.3rem;
+        }
+        /* Se quiser usar imagem real, substitua o placeholder por: */
+        .wc-screenshot-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .btn-wizardcut {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gradient-wizardcut);
+            color: white; padding: 1rem 2.5rem;
+            border-radius: 50px; font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            margin-top: 2rem;
+            border: none;
+        }
+        .btn-wizardcut:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.35);
+            color: white;
+        }
+
+        /* ===== YOUTUBE CHANNELS SECTION ===== */
+        .youtube-section {
+            padding: 8rem 0;
+            background: white;
+            position: relative;
+        }
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .channel-card {
+            background: var(--neutral-100);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+        .channel-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border-color: var(--neutral-200);
+        }
+        .channel-banner {
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Placeholder para banner — substitua por imagem real */
+        .channel-banner-placeholder {
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; color: rgba(255,255,255,0.8);
+        }
+        .channel-banner-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .channel-banner-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+        .channel-info {
+            padding: 1.5rem 2rem 2rem;
+        }
+        .channel-avatar-row {
+            display: flex; align-items: center; gap: 1rem;
+            margin-bottom: 1rem;
+            margin-top: -2.5rem;
+            position: relative; z-index: 2;
+        }
+        .channel-avatar {
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background: var(--gradient-cold);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700;
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .channel-avatar-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .channel-name {
+            font-size: 1.15rem;
+            margin-bottom: 0.1rem;
+            letter-spacing: -0.01em;
+        }
+        .channel-handle {
+            font-size: 0.8rem;
+            color: var(--neutral-400);
+        }
+        .channel-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        .channel-tags {
+            display: flex; flex-wrap: wrap; gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .channel-tag {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            background: rgba(229, 62, 62, 0.08);
+            color: var(--accent-red);
+            font-weight: 500;
+        }
+        .channel-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--accent-red);
+            font-weight: 600; font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .channel-link:hover {
+            color: #c53030;
+            gap: 12px;
+        }
+        .channel-link i { font-size: 1.1rem; }
+
+        /* Iframe container for embedded videos */
+        .video-embed-section {
+            padding: 0 0 6rem;
+            background: white;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        .video-embed-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            background: var(--neutral-800);
+        }
+        .video-embed-wrapper iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+            border: none;
+        }
+        .video-embed-info {
+            padding: 1rem 1.2rem;
+            background: var(--neutral-800);
+            color: white;
+        }
+        .video-embed-info h5 {
+            font-size: 0.9rem;
+            color: white;
+            margin-bottom: 0.2rem;
+        }
+        .video-embed-info p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            margin: 0;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 6rem 0;
+            background: var(--gradient-subtle);
+        }
+        .service-card {
+            background: white;
             border-radius: 20px;
             padding: 2.5rem;
             height: 100%;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
             border: 1px solid transparent;
         }
-
         .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            content: ''; position: absolute;
+            top: 0; left: 0; right: 0;
             height: 3px;
             background: var(--gradient-cold);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
-
         .service-card:hover {
-            background: white;
             transform: translateY(-8px);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
             border-color: var(--neutral-200);
         }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
+        .service-card:hover::before { transform: scaleX(1); }
         .service-icon {
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             background: var(--gradient-cold);
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin-bottom: 1.5rem;
-            color: white;
-            font-size: 1.5rem;
+            color: white; font-size: 1.5rem;
         }
-
         .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            letter-spacing: -0.01em;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
         }
-
         .service-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
-            margin-bottom: 1.5rem;
         }
 
-        .service-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-blue);
-            font-weight: 600;
-            text-decoration: none;
-            transition: gap 0.3s ease;
-        }
-
-        .service-link:hover {
-            gap: 12px;
-            color: var(--primary-blue);
-        }
-
-        /* About Section */
+        /* ===== ABOUT SECTION ===== */
         .about {
             padding: 8rem 0;
-            background: var(--gradient-subtle);
+            background: white;
             position: relative;
         }
-
-        .about-content {
-            padding-right: 3rem;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
+        .about-content { padding-right: 3rem; }
+        .about-image { position: relative; }
         .about-image-main {
             background: var(--gradient-cold);
             border-radius: 24px;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+            height: 480px;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
         }
-
         .about-image-main::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
+            content: ''; position: absolute;
+            width: 200%; height: 200%;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             animation: patternMove 30s linear infinite;
         }
-
         .about-image-main i {
             font-size: 5rem;
             color: rgba(255, 255, 255, 0.9);
-            position: relative;
-            z-index: 2;
+            position: relative; z-index: 2;
         }
-
+        /* Placeholder para foto da empresa/equipe */
+        .about-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
         .about-floating-card {
             position: absolute;
-            bottom: -30px;
-            right: -30px;
+            bottom: -30px; right: -30px;
             background: white;
             padding: 2rem;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
             max-width: 280px;
         }
-
-        .about-floating-card h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .about-floating-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        .about-features {
-            margin-top: 2.5rem;
-        }
-
+        .about-floating-card h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .about-floating-card p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; }
+        .about-features { margin-top: 2.5rem; }
         .about-feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            display: flex; align-items: flex-start;
+            gap: 1rem; margin-bottom: 1.5rem;
         }
-
         .about-feature-icon {
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            background: white;
+            width: 48px; height: 48px; min-width: 48px;
+            background: var(--neutral-100);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-blue);
-            font-size: 1.2rem;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent-blue); font-size: 1.2rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
+        .about-feature-content h4 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+        .about-feature-content p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; }
 
-        .about-feature-content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .about-feature-content p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            padding: 8rem 0;
-            background: white;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            background: var(--neutral-200);
-            cursor: pointer;
-        }
-
-        .portfolio-item::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--gradient-cold);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 1;
-        }
-
-        .portfolio-item:hover::before {
-            opacity: 0.9;
-        }
-
-        .portfolio-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            color: white;
-            z-index: 2;
-            transform: translateY(20px);
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-
-        .portfolio-item:hover .portfolio-content {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .portfolio-content h4 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-content p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .portfolio-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--neutral-400);
-            font-size: 3rem;
-        }
-
-        /* Contact Section */
+        /* ===== CONTACT ===== */
         .contact {
             padding: 8rem 0;
             background: var(--primary-dark);
             color: white;
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .contact::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 80%;
-            height: 150%;
+            content: ''; position: absolute;
+            top: -50%; right: -30%;
+            width: 80%; height: 150%;
             background: radial-gradient(circle, rgba(49, 130, 206, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
-
-        .contact .section-tag {
-            color: var(--accent-cyan);
-        }
-
-        .contact .section-title,
-        .contact .section-subtitle {
-            color: white;
-        }
-
-        .contact .section-subtitle {
-            opacity: 0.8;
-        }
-
+        .contact .section-tag { color: var(--accent-cyan); }
+        .contact .section-title, .contact .section-subtitle { color: white; }
+        .contact .section-subtitle { opacity: 0.8; }
         .contact-form {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 3rem;
+            border-radius: 24px; padding: 3rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .form-floating {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-floating .form-control,
-        .form-floating .form-select {
+        .form-floating { margin-bottom: 1.5rem; }
+        .form-floating .form-control {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: white;
-            padding: 1rem 1rem;
-            height: auto;
-            font-size: 1rem;
+            border-radius: 12px; color: white;
+            padding: 1rem; height: auto; font-size: 1rem;
         }
-
         .form-floating .form-control:focus {
             background: rgba(255, 255, 255, 0.08);
             border-color: var(--accent-cyan);
             box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.15);
         }
-
-        .form-floating label {
-            color: rgba(255, 255, 255, 0.6);
-            padding: 1rem;
-        }
-
+        .form-floating label { color: rgba(255, 255, 255, 0.6); padding: 1rem; }
         .form-floating > .form-control:focus ~ label,
         .form-floating > .form-control:not(:placeholder-shown) ~ label {
             color: var(--accent-cyan);
             transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
         }
-
-        .form-floating textarea.form-control {
-            min-height: 150px;
-        }
-
+        .form-floating textarea.form-control { min-height: 150px; }
         .btn-submit {
             background: var(--accent-cyan);
             color: var(--primary-dark);
-            padding: 1rem 3rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            border: none;
-            width: 100%;
+            padding: 1rem 3rem; border-radius: 50px;
+            font-weight: 700; font-size: 1rem;
+            border: none; width: 100%;
             transition: all 0.4s ease;
         }
-
         .btn-submit:hover {
             background: white;
             transform: translateY(-3px);
             box-shadow: 0 10px 40px rgba(79, 209, 197, 0.3);
         }
-
-        .contact-info {
-            padding-left: 3rem;
-        }
-
+        .contact-info { padding-left: 3rem; }
         .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            display: flex; align-items: flex-start;
+            gap: 1.5rem; margin-bottom: 2.5rem;
         }
-
         .contact-info-icon {
-            width: 56px;
-            height: 56px;
-            min-width: 56px;
+            width: 56px; height: 56px; min-width: 56px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-cyan);
-            font-size: 1.3rem;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent-cyan); font-size: 1.3rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .contact-info-content h4 {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .contact-info-content p {
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0;
-        }
-
+        .contact-info-content h4 { color: white; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .contact-info-content p { color: rgba(255, 255, 255, 0.7); margin: 0; }
         .contact-info-content a {
             color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color 0.3s ease;
+            text-decoration: none; transition: color 0.3s ease;
         }
-
-        .contact-info-content a:hover {
-            color: var(--accent-cyan);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
+        .contact-info-content a:hover { color: var(--accent-cyan); }
+        .social-links { display: flex; gap: 1rem; margin-top: 2rem; }
         .social-link {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.2rem; text-decoration: none;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-
         .social-link:hover {
             background: var(--accent-cyan);
             color: var(--primary-dark);
             transform: translateY(-3px);
         }
 
-        /* Footer */
+        /* ===== FOOTER ===== */
         .footer {
             background: var(--neutral-800);
-            color: white;
-            padding: 3rem 0;
+            color: white; padding: 3rem 0;
         }
-
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 1rem;
         }
-
         .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            display: flex; align-items: center; gap: 12px;
         }
-
         .footer-brand .logo-placeholder {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 40px; height: 40px; border-radius: 10px;
         }
-
-        .footer-brand .logo-placeholder span {
-            font-size: 0.9rem;
-        }
-
+        .footer-brand .logo-placeholder span { font-size: 0.9rem; }
         .footer-brand-text {
             font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
+            font-weight: 700; font-size: 1.2rem;
         }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-        }
-
+        .footer-links { display: flex; gap: 2rem; }
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 0.9rem;
+            text-decoration: none; font-size: 0.9rem;
             transition: color 0.3s ease;
         }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
+        .footer-links a:hover { color: white; }
         .footer-copy {
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.85rem;
         }
 
-        /* Animations */
+        /* ===== ANIMATIONS ===== */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
-
         @keyframes patternMove {
-            from {
-                transform: translate(0, 0);
-            }
-            to {
-                transform: translate(30px, 30px);
-            }
+            from { transform: translate(0, 0); }
+            to { transform: translate(30px, 30px); }
         }
-
-        /* Responsive */
-        @media (max-width: 991px) {
-            .hero-content {
-                text-align: center;
-                margin-bottom: 3rem;
-            }
-
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .about-content {
-                padding-right: 0;
-                margin-bottom: 4rem;
-            }
-
-            .contact-info {
-                padding-left: 0;
-                margin-top: 3rem;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 767px) {
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-floating-card {
-                position: relative;
-                bottom: auto;
-                right: auto;
-                margin-top: -2rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-
-        /* Scroll Reveal */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991px) {
+            .hero-content { text-align: center; margin-bottom: 3rem; }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .about-content { padding-right: 0; margin-bottom: 4rem; }
+            .contact-info { padding-left: 0; margin-top: 3rem; }
+            .wc-feature-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 767px) {
+            .channels-grid { grid-template-columns: 1fr; }
+            .video-grid { grid-template-columns: 1fr; }
+            .about-floating-card {
+                position: relative; bottom: auto; right: auto;
+                margin-top: -2rem; margin-left: 1rem; margin-right: 1rem;
+            }
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+
+    <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
@@ -975,34 +902,23 @@
                 </div>
                 Cass Prod
             </a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicos">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfólio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn-nav" href="#contato">Contato</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#wizardcut">WizardCut</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#channels">Channels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link btn-nav" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ==================== HERO ==================== -->
     <section id="home" class="hero">
         <div class="container">
             <div class="row align-items-center">
@@ -1010,17 +926,17 @@
                     <div class="hero-content">
                         <div class="hero-tag">
                             <span class="dot"></span>
-                            Produção Criativa + IA
+                            Digital Media & Software Solutions
                         </div>
-                        <h1>Transformamos <span class="highlight">ideias</span> em realidade</h1>
-                        <p>Soluções criativas e profissionais, potencializadas por inteligência artificial, para elevar sua marca ao próximo nível.</p>
+                        <h1>Building the <span class="highlight">future</span> of digital content</h1>
+                        <p>Cass Prod is a digital media company specializing in AI-powered software development and content creation across multiple platforms.</p>
                         <div class="hero-buttons">
-                            <a href="#contato" class="btn-primary-custom">
-                                Iniciar Projeto
+                            <a href="#products" class="btn-primary-custom">
+                                Our Products
                                 <i class="bi bi-arrow-right"></i>
                             </a>
-                            <a href="#portfolio" class="btn-secondary-custom">
-                                Ver Trabalhos
+                            <a href="#channels" class="btn-secondary-custom">
+                                View Channels
                             </a>
                         </div>
                     </div>
@@ -1028,24 +944,22 @@
                 <div class="col-lg-6">
                     <div class="hero-visual">
                         <div class="hero-card">
-                            <div class="hero-card-content">
-                                <div class="stats-grid">
-                                    <div class="stat-item">
-                                        <div class="stat-number">150+</div>
-                                        <div class="stat-label">Projetos Entregues</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-number">98%</div>
-                                        <div class="stat-label">Clientes Satisfeitos</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-number">5+</div>
-                                        <div class="stat-label">Anos de Experiência</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-number">24h</div>
-                                        <div class="stat-label">Suporte Disponível</div>
-                                    </div>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number">7+</div>
+                                    <div class="stat-label">YouTube Channels</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">1</div>
+                                    <div class="stat-label">SaaS Platform</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">AI</div>
+                                    <div class="stat-label">Powered Technology</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">24/7</div>
+                                    <div class="stat-label">Platform Available</div>
                                 </div>
                             </div>
                         </div>
@@ -1055,179 +969,522 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="servicos" class="services">
+    <!-- ==================== PRODUCTS OVERVIEW ==================== -->
+    <section id="products" class="products-overview">
         <div class="container">
             <div class="section-header text-center reveal">
-                <span class="section-tag">Nossos Serviços</span>
-                <h2 class="section-title">O que oferecemos</h2>
-                <p class="section-subtitle mx-auto">Soluções completas para atender todas as suas necessidades de produção com excelência e profissionalismo.</p>
+                <span class="section-tag">Our Products & Services</span>
+                <h2 class="section-title">What we build and create</h2>
+                <p class="section-subtitle mx-auto">From AI-powered software platforms to digital media content, Cass Prod delivers innovative solutions across multiple verticals.</p>
             </div>
-            
+
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-camera-video"></i>
+                <!-- WizardCut Card -->
+                <div class="col-lg-6 reveal">
+                    <div class="product-highlight-card">
+                        <div class="product-card-header">
+                            <span class="product-badge badge-software">
+                                <i class="bi bi-code-slash"></i> SaaS Platform
+                            </span>
                         </div>
-                        <h3>Produção Audiovisual</h3>
-                        <p>Criação de conteúdo audiovisual de alta qualidade, desde vídeos institucionais até produções criativas.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <div class="product-card-body">
+                            <h3>WizardCut</h3>
+                            <p>An AI-powered web application for automatic manga and comic panel detection and extraction. Leveraging YOLO object detection technology, WizardCut enables content creators to efficiently process, cut, and organize comic panels at scale — with premium features including intelligent watermark removal.</p>
+                            <a href="#wizardcut" class="product-link wizardcut-link">
+                                Learn more <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-palette"></i>
+
+                <!-- YouTube Channels Card -->
+                <div class="col-lg-6 reveal">
+                    <div class="product-highlight-card">
+                        <div class="product-card-header">
+                            <span class="product-badge badge-media">
+                                <i class="bi bi-play-btn"></i> Digital Media
+                            </span>
                         </div>
-                        <h3>Design Criativo</h3>
-                        <p>Desenvolvimento de identidade visual, materiais gráficos e soluções criativas para sua marca.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-megaphone"></i>
+                        <div class="product-card-body">
+                            <h3>YouTube Content Network</h3>
+                            <p>A growing network of 7+ YouTube channels focused on manga, manhwa, and stoic philosophy content. Producing recaps, reviews, and original narrated content in multiple languages, our channels reach a diverse global audience passionate about Asian comics and personal development.</p>
+                            <a href="#channels" class="product-link youtube-link">
+                                View channels <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
-                        <h3>Marketing Digital</h3>
-                        <p>Estratégias de marketing digital para aumentar sua presença online e alcançar mais clientes.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-music-note-beamed"></i>
-                        </div>
-                        <h3>Produção Musical</h3>
-                        <p>Composição, arranjo e produção musical profissional para diversos projetos e plataformas.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-broadcast"></i>
-                        </div>
-                        <h3>Transmissões Ao Vivo</h3>
-                        <p>Cobertura profissional de eventos com transmissão ao vivo de alta qualidade.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-lightbulb"></i>
-                        </div>
-                        <h3>Consultoria</h3>
-                        <p>Orientação estratégica para projetos de produção, do planejamento à execução.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-robot"></i>
-                        </div>
-                        <h3>Soluções com IA</h3>
-                        <p>Criações inovadoras utilizando inteligência artificial para potencializar seus projetos e resultados.</p>
-                        <a href="#contato" class="service-link">
-                            Saiba mais
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="sobre" class="about">
+    <!-- ==================== WIZARDCUT SECTION ==================== -->
+    <section id="wizardcut" class="wizardcut-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal">
+                    <span class="section-tag">Product — Software</span>
+                    <h2 class="section-title">WizardCut</h2>
+                    <p class="section-subtitle">An intelligent platform designed for manga and comic content creators who need fast, accurate panel extraction powered by artificial intelligence.</p>
+
+                    <div class="wc-feature-grid">
+                        <div class="wc-feature">
+                            <div class="wc-feature-icon"><i class="bi bi-cpu"></i></div>
+                            <div>
+                                <h4>AI Panel Detection</h4>
+                                <p>YOLO-based object detection for automatic panel identification and extraction.</p>
+                            </div>
+                        </div>
+                        <div class="wc-feature">
+                            <div class="wc-feature-icon"><i class="bi bi-scissors"></i></div>
+                            <div>
+                                <h4>Smart Cutting</h4>
+                                <p>Precision cutting engine that preserves quality while separating individual panels.</p>
+                            </div>
+                        </div>
+                        <div class="wc-feature">
+                            <div class="wc-feature-icon"><i class="bi bi-droplet"></i></div>
+                            <div>
+                                <h4>Watermark Removal</h4>
+                                <p>Premium feature using OpenCV with ORB matching and Telea inpainting algorithms.</p>
+                            </div>
+                        </div>
+                        <div class="wc-feature">
+                            <div class="wc-feature-icon"><i class="bi bi-cloud-upload"></i></div>
+                            <div>
+                                <h4>Cloud-Based</h4>
+                                <p>Full web application — no installation required. Access from any browser, anywhere.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.wizardcut.com" target="_blank" class="btn-wizardcut">
+                        Visit WizardCut <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 reveal">
+                    <div class="wc-screenshot-container">
+                        <div class="wc-screenshot-bar">
+                            <div class="wc-dot red"></div>
+                            <div class="wc-dot yellow"></div>
+                            <div class="wc-dot green"></div>
+                            <div class="wc-screenshot-url">wizardcut.com</div>
+                        </div>
+                        <div class="wc-screenshot-body">
+                            
+                                <img src="source/SOURCE_WIZARDCUT_SCREENSHOT.jpg" alt="WizardCut Platform" class="wc-screenshot-img">
+                                
+                            <div class="wc-screenshot-placeholder">
+                                <i class="bi bi-magic"></i>
+                                <span>WizardCut</span>
+                                <small>AI-Powered Panel Extraction</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== YOUTUBE CHANNELS ==================== -->
+    <section id="channels" class="youtube-section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tag">Product — Digital Media</span>
+                <h2 class="section-title">Our YouTube Channels</h2>
+                <p class="section-subtitle mx-auto">A network of content channels producing manga recaps, manhwa readings, and motivational content for a global audience.</p>
+            </div>
+
+            <div class="channels-grid reveal">
+
+                <!-- Channel 1: O Estoico -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);">
+                        <!--
+                            IMAGEM: Banner do canal O Estoico
+                            Substitua por: <img src="SOURCE_OESTOICO_BANNER.jpg" alt="O Estoico" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-columns-gap"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar">
+                                 <img src="source/SOURCE_OESTOICO_AVATAR.jpg" alt="O Estoico" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">O Estoico</div>
+                                <div class="channel-handle">@OEstoico_</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Content focused on stoic philosophy, personal development, and motivational reflections. Delivering timeless wisdom for modern life.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag" style="background: rgba(45,52,54,0.1); color: #2d3436;">Stoicism</span>
+                            <span class="channel-tag" style="background: rgba(45,52,54,0.1); color: #2d3436;">Philosophy</span>
+                            <span class="channel-tag" style="background: rgba(45,52,54,0.1); color: #2d3436;">Self-Growth</span>
+                        </div>
+                        <a href="https://www.youtube.com/@OEstoico_" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Channel 2: Vadelo Manhwa -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);">
+                        <!--
+                            IMAGEM: Banner do canal Vadelo Manhwa
+                            Substitua por: <img src="SOURCE_VADELO_BANNER.jpg" alt="Vadelo Manhwa" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-book"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+                                <img src="source/SOURCE_VADELO_AVATAR.jpg" alt="Vadelo Manhwa" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">Vadelo Manhwa</div>
+                                <div class="channel-handle">@VadeloManhwa</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Manhwa recaps and readings with engaging narration. Covering popular titles and hidden gems from the world of Korean comics.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag">Manhwa</span>
+                            <span class="channel-tag">Recaps</span>
+                            <span class="channel-tag">Korean Comics</span>
+                        </div>
+                        <a href="https://www.youtube.com/@VadeloManhwa" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Channel 3: REI RECAPS -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #e17055 0%, #fdcb6e 100%);">
+                        <!--
+                            IMAGEM: Banner
+                            Substitua por: <img src="SOURCE_REIRECAPS_BANNER.jpg" alt="REI RECAPS" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-film"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar" style="background: linear-gradient(135deg, #e17055, #fdcb6e);">
+                                <img src="SOURCE_REIRECAPS_AVATAR.jpg" alt="REI RECAPS" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">REI RECAPS</div>
+                                <div class="channel-handle">@REIRECAPS</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Comprehensive manga and manhwa recap content. Delivering condensed, high-quality story summaries for readers who want to stay up to date.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag">Recaps</span>
+                            <span class="channel-tag">Manga</span>
+                            <span class="channel-tag">Manhwa</span>
+                        </div>
+                        <a href="https://www.youtube.com/@REIRECAPS" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Channel 4: Tikin Manhwa Recaps -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #00b894 0%, #55efc4 100%);">
+                        <!--
+                            IMAGEM: Banner
+                            Substitua por: <img src="SOURCE_TIKIN_BANNER.jpg" alt="Tikin Manhwa Recaps" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-chat-square-text"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar" style="background: linear-gradient(135deg, #00b894, #55efc4);">
+                                <img src="source/SOURCE_TIKIN_AVATAR.jpg" alt="Tikin Manhwa Recaps" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">Tikin Manhwa Recaps</div>
+                                <div class="channel-handle">@TikinManhwaRecaps</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Detailed manhwa recap videos bringing popular Korean webtoon stories to life with dynamic narration and visual storytelling.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag">Manhwa</span>
+                            <span class="channel-tag">Recaps</span>
+                            <span class="channel-tag">Webtoon</span>
+                        </div>
+                        <a href="https://www.youtube.com/@TikinManhwaRecaps" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Channel 5: 1 Hour Manhwa Recap -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);">
+                        <!--
+                            IMAGEM: Banner
+                            Substitua por: <img src="SOURCE_1HOUR_BANNER.jpg" alt="1 Hour Manhwa Recap" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-clock-history"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar" style="background: linear-gradient(135deg, #0984e3, #74b9ff);">
+                                <img src="source/SOURCE_1HOUR_AVATAR.jpg" alt="1 Hour Manhwa Recap" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">1 Hour Manhwa Recap</div>
+                                <div class="channel-handle">@1hourManhwaRecap</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Extended-format manhwa recaps for binge-watching. Full story arcs condensed into hour-long immersive recap experiences.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag">Long-Form</span>
+                            <span class="channel-tag">Manhwa</span>
+                            <span class="channel-tag">Binge Content</span>
+                        </div>
+                        <a href="https://www.youtube.com/@1hourManhwaRecap" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Channel 6: Lady Manhwa -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);">
+                        <!--
+                            IMAGEM: Banner
+                            Substitua por: <img src="SOURCE_LADY_BANNER.jpg" alt="Lady Manhwa" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-heart"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar" style="background: linear-gradient(135deg, #e84393, #fd79a8);">
+                                <img src="source/SOURCE_LADY_AVATAR.jpg" alt="Lady Manhwa" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">Lady Manhwa</div>
+                                <div class="channel-handle">@LadyManhwa-ofc</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Manhwa content with a focus on romance, fantasy, and female-lead stories. Curated recaps for readers who love immersive narratives.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag">Romance</span>
+                            <span class="channel-tag">Fantasy</span>
+                            <span class="channel-tag">Manhwa</span>
+                        </div>
+                        <a href="https://www.youtube.com/@LadyManhwa-ofc" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Channel 7: Empress Manhwa -->
+                <div class="channel-card">
+                    <div class="channel-banner" style="background: linear-gradient(135deg, #d63031 0%, #ff7675 100%);">
+                        <!--
+                            IMAGEM: Banner
+                            Substitua por: <img src="SOURCE_EMPRESS_BANNER.jpg" alt="Empress Manhwa" class="channel-banner-img">
+                        -->
+                        <div class="channel-banner-placeholder"><i class="bi bi-gem"></i></div>
+                        <div class="channel-banner-overlay"></div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar-row">
+                            <div class="channel-avatar" style="background: linear-gradient(135deg, #d63031, #ff7675);">
+                                <img src="source/SOURCE_EMPRESS_AVATAR.jpg" alt="Empress Manhwa" class="channel-avatar-img">
+                            </div>
+                            <div>
+                                <div class="channel-name">Empress Manhwa</div>
+                                <div class="channel-handle">@Empressmanhwa-ofc</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Premium manhwa recap content featuring powerful protagonists and epic storylines. High-quality narrated recaps of trending titles.</p>
+                        <div class="channel-tags">
+                            <span class="channel-tag">Manhwa</span>
+                            <span class="channel-tag">Action</span>
+                            <span class="channel-tag">Recaps</span>
+                        </div>
+                        <a href="https://www.youtube.com/@Empressmanhwa-ofc" target="_blank" class="channel-link">
+                            <i class="bi bi-youtube"></i> Visit Channel <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VIDEO EMBEDS ==================== -->
+    <section class="video-embed-section">
+        <div class="container">
+            <div class="section-header text-center reveal" style="margin-bottom: 3rem;">
+                <span class="section-tag">Featured Content</span>
+                <h2 class="section-title">Sample Videos</h2>
+                <p class="section-subtitle mx-auto">A selection of recent content from our channel network.</p>
+            </div>
+            <div class="video-grid reveal">
+                <div class="video-embed-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/gi0axX_YmBQ" 
+                        title="Video Estoico"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="video-embed-info">
+                        <h5>Featured Manhwa Recap</h5>
+                        <p>Vadelo Manhwa</p>
+                    </div>
+                </div>
+                <div class="video-embed-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/GOfxyB0_H9E" 
+                        title="Video Vadelo Manhwa"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="video-embed-info">
+                        <h5>Stoic Philosophy Episode</h5>
+                        <p>O Estoico</p>
+                    </div>
+                </div>
+                <div class="video-embed-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Ort_hU8hUio" 
+                        title="Video Rei Recaps"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="video-embed-info">
+                        <h5>1 Hour Manhwa Compilation</h5>
+                        <p>1 Hour Manhwa Recap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tag">Our Capabilities</span>
+                <h2 class="section-title">Core competencies</h2>
+                <p class="section-subtitle mx-auto">The technical expertise and creative skills that drive our products.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-robot"></i></div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Computer vision, object detection (YOLO), and image processing solutions for content automation and intelligent workflows.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Full-stack web application development with React, TypeScript, Python, and modern cloud infrastructure.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-camera-video"></i></div>
+                        <h3>Content Production</h3>
+                        <p>Scalable video content creation, narration, and editorial production for digital platforms including YouTube.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-image"></i></div>
+                        <h3>Image Processing</h3>
+                        <p>Advanced image manipulation with OpenCV — watermark removal, panel detection, inpainting, and batch processing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>Digital Strategy</h3>
+                        <p>Multi-channel content strategy, audience growth, and monetization optimization across digital platforms.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-cpu"></i></div>
+                        <h3>API Integration</h3>
+                        <p>Custom API development and third-party integrations including AI services, payment systems, and cloud platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 reveal">
                     <div class="about-content">
-                        <span class="section-tag">Sobre Nós</span>
-                        <h2 class="section-title">Excelência em cada detalhe</h2>
-                        <p class="section-subtitle">A Cass Prod nasceu da paixão por criar experiências memoráveis. Combinamos criatividade humana com o poder da inteligência artificial para entregar resultados que superam expectativas.</p>
-                        
+                        <span class="section-tag">About Us</span>
+                        <h2 class="section-title">Innovation at the intersection of technology and content</h2>
+                        <p class="section-subtitle">Cass Prod is a digital media and software company that combines artificial intelligence with creative content production. We build tools that empower creators and produce original content that engages global audiences.</p>
+
                         <div class="about-features">
                             <div class="about-feature">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-trophy"></i>
-                                </div>
+                                <div class="about-feature-icon"><i class="bi bi-lightbulb"></i></div>
                                 <div class="about-feature-content">
-                                    <h4>Qualidade Premium</h4>
-                                    <p>Utilizamos equipamentos e técnicas de última geração.</p>
+                                    <h4>Innovation-Driven</h4>
+                                    <p>We leverage AI and machine learning to create products that solve real problems for content creators.</p>
                                 </div>
                             </div>
-                            
                             <div class="about-feature">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-people"></i>
-                                </div>
+                                <div class="about-feature-icon"><i class="bi bi-globe2"></i></div>
                                 <div class="about-feature-content">
-                                    <h4>Equipe Especializada</h4>
-                                    <p>Profissionais experientes e apaixonados pelo que fazem.</p>
+                                    <h4>Global Reach</h4>
+                                    <p>Our content network serves audiences across multiple languages and regions worldwide.</p>
                                 </div>
                             </div>
-                            
                             <div class="about-feature">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-clock-history"></i>
-                                </div>
+                                <div class="about-feature-icon"><i class="bi bi-shield-check"></i></div>
                                 <div class="about-feature-content">
-                                    <h4>Prazos Cumpridos</h4>
-                                    <p>Compromisso com entregas pontuais e organizadas.</p>
+                                    <h4>Quality & Reliability</h4>
+                                    <p>Enterprise-grade software development with consistent, high-quality content production.</p>
                                 </div>
                             </div>
-                            
                             <div class="about-feature">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-cpu"></i>
-                                </div>
+                                <div class="about-feature-icon"><i class="bi bi-arrows-angle-expand"></i></div>
                                 <div class="about-feature-content">
-                                    <h4>Tecnologia & IA</h4>
-                                    <p>Inteligência artificial integrada em nossas soluções criativas.</p>
+                                    <h4>Scalable Operations</h4>
+                                    <p>Built for growth — from our SaaS platform to our expanding content channel network.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6 reveal">
                     <div class="about-image">
                         <div class="about-image-main">
-                            <i class="bi bi-play-circle"></i>
+                            <!--
+                                IMAGEM: Foto da equipe/escritório ou imagem representativa
+                                Substitua o ícone abaixo por:
+                                <img src="SOURCE_ABOUT_IMAGE.jpg" alt="Cass Prod Team" class="about-img">
+                            -->
+                            <i class="bi bi-building"></i>
                         </div>
                         <div class="about-floating-card">
-                            <h4>🎯 Nossa Missão</h4>
-                            <p>Transformar visões em realidade através de produções que inspiram e conectam pessoas.</p>
+                            <h4>🎯 Our Mission</h4>
+                            <p>To empower digital content creators with AI-powered tools while building engaging content that connects global communities.</p>
                         </div>
                     </div>
                 </div>
@@ -1235,181 +1492,79 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <span class="section-tag">Portfólio</span>
-                <h2 class="section-title">Nossos trabalhos</h2>
-                <p class="section-subtitle mx-auto">Conheça alguns dos projetos que desenvolvemos com dedicação e criatividade.</p>
-            </div>
-            
-            <div class="portfolio-grid reveal">
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="bi bi-image"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Projeto 01</h4>
-                        <p>Produção Audiovisual</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="bi bi-image"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Projeto 02</h4>
-                        <p>Design Criativo</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="bi bi-image"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Projeto 03</h4>
-                        <p>Marketing Digital</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="bi bi-image"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Projeto 04</h4>
-                        <p>Evento Corporativo</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="bi bi-image"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Projeto 05</h4>
-                        <p>Produção Musical</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="bi bi-image"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Projeto 06</h4>
-                        <p>Transmissão Ao Vivo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contato" class="contact">
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 reveal">
                     <div class="section-header">
-                        <span class="section-tag">Contato</span>
-                        <h2 class="section-title">Vamos conversar?</h2>
-                        <p class="section-subtitle">Entre em contato e vamos transformar suas ideias em projetos incríveis.</p>
+                        <span class="section-tag">Contact</span>
+                        <h2 class="section-title">Get in touch</h2>
+                        <p class="section-subtitle">Have a question about our products or interested in partnership? We'd love to hear from you.</p>
                     </div>
-                    
                     <form class="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome">
-                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Your name">
+                                    <label for="nome">Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="seu@email.com">
-                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="your@email.com">
+                                    <label for="email">Email</label>
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="assunto" placeholder="Assunto">
-                            <label for="assunto">Assunto</label>
+                            <input type="text" class="form-control" id="assunto" placeholder="Subject">
+                            <label for="assunto">Subject</label>
                         </div>
-                        
                         <div class="form-floating">
-                            <textarea class="form-control" id="mensagem" placeholder="Sua mensagem"></textarea>
-                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" placeholder="Your message"></textarea>
+                            <label for="mensagem">Message</label>
                         </div>
-                        
                         <button type="submit" class="btn-submit">
-                            Enviar Mensagem
-                            <i class="bi bi-send ms-2"></i>
+                            Send Message <i class="bi bi-send ms-2"></i>
                         </button>
                     </form>
                 </div>
-                
                 <div class="col-lg-6 reveal">
                     <div class="contact-info">
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
+                            <div class="contact-info-icon"><i class="bi bi-geo-alt"></i></div>
                             <div class="contact-info-content">
-                                <h4>Localização</h4>
-                                <p>Sua Cidade, Estado - Brasil</p>
+                                <h4>Location</h4>
+                                <p>United States</p>
                             </div>
                         </div>
-                        
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="bi bi-envelope"></i>
-                            </div>
+                            <div class="contact-info-icon"><i class="bi bi-envelope"></i></div>
                             <div class="contact-info-content">
-                                <h4>E-mail</h4>
-                                <a href="mailto:contato@cassprod.com">contato@cassprod.com</a>
+                                <h4>Email</h4>
+                                <a href="mailto:contact@cassprod.com">contact@cassprod.com</a>
                             </div>
                         </div>
-                        
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="bi bi-phone"></i>
-                            </div>
+                            <div class="contact-info-icon"><i class="bi bi-globe"></i></div>
                             <div class="contact-info-content">
-                                <h4>Telefone</h4>
-                                <a href="tel:+5500000000000">(00) 00000-0000</a>
+                                <h4>WizardCut</h4>
+                                <a href="https://www.wizardcut.com" target="_blank">www.wizardcut.com</a>
                             </div>
                         </div>
-                        
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="bi bi-clock"></i>
-                            </div>
+                            <div class="contact-info-icon"><i class="bi bi-clock"></i></div>
                             <div class="contact-info-content">
-                                <h4>Horário de Atendimento</h4>
-                                <p>Segunda a Sexta: 9h às 18h</p>
+                                <h4>Business Hours</h4>
+                                <p>Monday — Friday: 9AM to 6PM EST</p>
                             </div>
                         </div>
-                        
                         <div class="social-links">
-                            <a href="#" class="social-link" aria-label="Instagram">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Facebook">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="YouTube">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="WhatsApp">
-                                <i class="bi bi-whatsapp"></i>
-                            </a>
+                            <a href="https://www.youtube.com/@VadeloManhwa" target="_blank" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1417,27 +1572,24 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="logo-placeholder">
-                        <span>CP</span>
-                    </div>
+                    <div class="logo-placeholder"><span>CP</span></div>
                     <span class="footer-brand-text">Cass Prod</span>
                 </div>
-                
                 <div class="footer-links">
-                    <a href="#home">Início</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#portfolio">Portfólio</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#wizardcut">WizardCut</a>
+                    <a href="#channels">Channels</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                
                 <div class="footer-copy">
-                    &copy; 2025 Cass Prod. Todos os direitos reservados.
+                    &copy; 2025 Cass Prod LLC. All rights reserved.
                 </div>
             </div>
         </div>
@@ -1445,54 +1597,46 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
-        // Navbar scroll effect
+        // Navbar scroll
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar-custom');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Scroll reveal animation
+        // Scroll reveal
         function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            reveals.forEach(element => {
-                const windowHeight = window.innerHeight;
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('active');
+            document.querySelectorAll('.reveal').forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < window.innerHeight - 150) {
+                    el.classList.add('active');
                 }
             });
         }
-
         window.addEventListener('scroll', reveal);
         window.addEventListener('load', reveal);
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // Close mobile menu
+                const navCollapse = document.querySelector('.navbar-collapse');
+                if (navCollapse.classList.contains('show')) {
+                    new bootstrap.Collapse(navCollapse).hide();
                 }
             });
         });
 
-        // Form submission (placeholder)
+        // Form
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            alert('Message sent successfully! We will get back to you soon.');
             this.reset();
         });
     </script>
